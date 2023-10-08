@@ -43,6 +43,7 @@
     "prettier": "^2.8.8",
     "start-server-and-test": "^2.0.1",
     "typescript": "~5.2.2",
+    "unocss": "^0.56.5",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.11",
