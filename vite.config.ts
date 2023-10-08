@@ -4,12 +4,14 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
+
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
@@ -29,6 +31,15 @@ export default defineConfig({
         enabled: true,
         filepath: './.eslintrc-auto-import.json',
       }
+    }),
+
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      // allow auto load components under `./src/components/`
+      extensions: ['vue'],
+      // allow auto import and register components
+      include: [/\.vue$/, /\.vue\?vue/],
+      dts: 'src/components.d.ts',
     }),
   ],
   resolve: {

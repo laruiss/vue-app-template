@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// Every component from src/components is auto-imported thanks to unplugin-vue-components
 </script>
 
 <template>
